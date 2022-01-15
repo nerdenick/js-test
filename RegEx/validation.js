@@ -12,7 +12,11 @@ const patterns = {
 
 //validation function
 function validate(field, regex){
-    console.log(regex.test(value));
+    if(regex.text(field.value)){
+        field.className = 'valid';
+    } else {
+        field.className = 'invalid';
+    }
 }
 
 //input I have no idea what it does
